@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Świata - Mapa Odsyłaczy</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f4f7fb;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: #475569;
+    }
+    .map-container {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    img {
+      display: block;
+      border: 0;
+    }
+    area {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mapa świata – wybierz kontynent</h1>
+  <p>Kliknij na wybrany kontynent na mapie, aby otworzyć artykuł w Wikipedii.</p>
+
+  <div class="map-container">
+    <img src="mapa.jpg" width="1024" height="527" border="0" alt="Mapa świata" usemap="#mapaswiata">
+
+    <map name="mapaswiata">
+      <!-- Ameryka Północna -->
+      <area shape="poly"
+            coords="115,45,365,25,345,165,295,245,215,215,115,95"
+            alt="Ameryka Północna"
+            title="Ameryka Północna"
+            href="https://pl.wikipedia.org/wiki/Ameryka_P%C3%B3%C5%82nocna"
+            target="_blank">
+
+      <!-- Ameryka Południowa -->
+      <area shape="poly"
+            coords="275,225,405,265,355,440,315,435,265,285"
+            alt="Ameryka Południowa"
+            title="Ameryka Południowa"
+            href="https://pl.wikipedia.org/wiki/Ameryka_Po%C5%82udniowa"
+            target="_blank">
+
+      <!-- Europa (prostokąt - rect: x1, y1, x2, y2) -->
+      <area shape="rect"
+            coords="460,50,615,155"
+            alt="Europa"
+            title="Europa"
+            href="https://pl.wikipedia.org/wiki/Europa"
+            target="_blank">
+
+      <!-- Afryka (wielokąt - poly) -->
+      <area shape="poly"
+            coords="450,155,585,160,650,235,580,385,520,385,445,235"
+            alt="Afryka"
+            title="Afryka"
+            href="https://pl.wikipedia.org/wiki/Afryka"
+            target="_blank">
+
+      <!-- Azja (wielokąt - poly) -->
+      <area shape="poly"
+            coords="585,140,615,45,925,55,895,295,750,305,635,220"
+            alt="Azja"
+            title="Azja"
+            href="https://pl.wikipedia.org/wiki/Azja"
+            target="_blank">
+
+      <!-- Australia (okrąg - circle: środek X, środek Y, promień R) -->
+      <area shape="circle"
+            coords="870,365,75"
+            alt="Australia"
+            title="Australia"
+            href="https://pl.wikipedia.org/wiki/Australia_(kontynent)"
+            target="_blank">
+
+      <!-- Antarktyda (prostokąt - rect: x1, y1, x2, y2) -->
+      <area shape="rect"
+            coords="175,465,895,520"
+            alt="Antarktyda"
+            title="Antarktyda"
+            href="https://pl.wikipedia.org/wiki/Antarktyda"
+            target="_blank">
+    </map>
+  </div>
+
+</body>
+</html>
+
